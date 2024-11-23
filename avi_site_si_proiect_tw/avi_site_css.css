@@ -18,13 +18,7 @@ html{
 }
 
 body{
-	/*max-width: 100%; necesar?*/
 	background-color: var(--color-body);
-	/*display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: stretch;*/            /*necesar?*/
 	padding: 0;
 	margin: 0;
 }
@@ -33,7 +27,7 @@ header{
 	max-width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around; /*space-evenly arata la fel de bine*/
+	justify-content: space-around;
 	align-items: stretch;
 }
 
@@ -51,7 +45,7 @@ a:hover{
 }
 
 a:active{
-	color: #2f4f4f; /*teal*/
+	color: #2f4f4f;
 }
 
 .meniu{
@@ -59,12 +53,11 @@ a:active{
 	display: none;
 	flex-direction: column;
 	position: absolute;
-	/*asta face drop down*/
 	border: thick dotted pink;
 	border-radius: 3%;
 	min-width: 6em;
 }
-	/*centreaza lista drop down?*/
+
 .meniu a{
 	display: flex;
 }
@@ -87,7 +80,6 @@ nav:hover .meniu{
 nav{
 	cursor: pointer;
 	text-align: center;
-	/*?*/
 	position: relative;
 	display: inline-block;
 }
@@ -135,7 +127,6 @@ h1{
 	background: var(--color-blue);
 	height: 9%;
 	padding: 5% 10%;
-	/*font-size: 2rem;*/
 }
 
 h2:not(#special){
@@ -220,7 +211,6 @@ div#galerie1{
 
 div#galerie1 > *{
 	max-width: 100%;
-	/*margin: 2%; poate arata mai bine fara*/
 }
 
 .tapestry, nav{
@@ -254,7 +244,7 @@ figure{
 
 figure > img{
 	display: flex;
-	align-content: stretch; /*center?*/
+	align-content: stretch;
 	max-width: 100%;
 	height: auto;
 }
@@ -262,15 +252,15 @@ figure > img{
 figcaption{
 	font-style: oblique;
 	font-weight: bold;
-	background: var(--color-body); /*putem incerca si altceva*/
+	background: var(--color-body);
 }
 
 .galerie > figure:nth-of-type(odd) > figcaption{
-    color: #2f4f4f; /*teal*/
+    color: #2f4f4f;
 }
 
 .galerie > figure:nth-of-type(even) > figcaption{
-    color: #008b8b; /*grey*/
+    color: #008b8b;
 }
 
 #galerie2{
@@ -545,9 +535,8 @@ footer p{
 		padding: 10%;
 	}
 	
-	div.galerie > figure{ /*problema e ca toate sunt prea la dreapta*/
+	div.galerie > figure{
 		justify-self: start;
-		/*border: 2px solid blue;*/
 		width: 80%;
 	}
 	
