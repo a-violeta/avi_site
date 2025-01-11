@@ -43,10 +43,10 @@ window.onload = function(){
 
     //imagine random pe header
     const images = [
-        "../resources/images/IMG_20240601_104055.jpg",
-        "../resources/images/IMG_20240623_100650.jpg",
-        "../resources/images/IMG_20210211_112526.jpg",
-        "../resources/images/IMG_20210115_133807.jpg"
+        "../images/IMG_20240601_104055.jpg",
+        "../images/IMG_20240623_100650.jpg",
+        "../images/IMG_20210211_112526.jpg",
+        "../images/IMG_20210115_133807.jpg"
     ];
 
     const header = document.querySelector("header");
