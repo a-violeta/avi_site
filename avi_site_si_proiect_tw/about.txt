@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Flamenco
-- Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/flamenco/v18/neIIzCehqYguo67ssaWGHK06UY30.ttf
-- Font License: undefined)
