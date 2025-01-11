@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Formular</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../resources/css/avi_site_css.css" type="text/css">
+        <script type="text/javascript" src="resources/script/avi_formular.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="../resources/icon/apple-touch-icon.png">
+	      <link rel="icon" type="image/png" sizes="32x32" href="../resources/icon/favicon-32x32.png">
+	      <link rel="icon" type="image/png" sizes="16x16" href="../resources/icon/favicon-16x16.png">
+	      <link rel="manifest" href="../resources/icon/site.webmanifest">
+    </head>
+    <body>
+        <h3>Formular pentru crearea unui proiect la alegere</h3>
+        <p class="instructiuni">Câmpurile marcate cu "*" NU se completează obligatoriu.</p>
+        <div id="container"> 
+          <form id="user_form" action="project_request" method="post" target="_self">
+            <fieldset>
+              <legend>Date personale</legend>
+              <p>În secțiunea "Nume" puteți să completați cu numele complet sau cum vreți să fiți adresați în viitoarele conversații cu privire la proiect.</p>
+
+              <label for="nume">Nume:</label><br>
+              <input type="text" id="nume" name="nume" minlength="2" maxlength="30" required><br><br>
+
+              <p>Țara și județul sunt cerute pentru a lua în calcul costul transportului pentru produs.</p>
+
+              <label>Țara:</label><br>
+              <label>
+                <input type="radio" name="country" value="romania" id="romania" checked>
+                  România
+              </label><br>
+              <label>
+                <input type="radio" name="country" value="other" id="other">
+                  Altă țară
+              </label><br><br>
+
+              <div id="county-container">
+                <label for="county-dropdown">Județ:</label>
+                <select id="county-dropdown" name="county">
+                  <option value="">-- Selectează județul --</option>
+                </select>
+                <!-- Câmp text pentru județ -->
+                <input id="county-text" name="county" type="text" placeholder="Camp optional">
+              </div>
+            </fieldset>
+   
+            <fieldset>
+              <legend>Contact</legend>
+              <label for="telefon">Telefon (format internațional):</label><br>
+              <input type="tel" id="telefon" name="telefon" pattern="^\+?[0-9]{7,15}$" required><br><br>
+   
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email" required><br><br>
+   
+              <!-- <label for="web_url">nu:</label><br>
+              <input type="url" id="web_url" name="web_url" pattern="https?://.+"> -->
+            </fieldset>
+   
+            <p class="instructiuni">Vă rog frumos când alegeți data de finalizare a proiectului să aveți în vedere că eu nu lucrez în fiecare zi a anului din motive religioase. Vă pun la dispoziție o lista cu zilele în care nu lucrez marcate cu cruce roșie, pentru anul 2025. Lista se află la pagina web: <a href="https://www.crestinortodox.ro/calendar-ortodox/">crestinortodox.ro</a></p>
+            <!--merge, dar cu erori multe: <iframe src="https://www.noutati-ortodoxe.ro/calendar-ortodox/?year=2025" frameborder="1" allowfullscreen></iframe> -->
+
+            <fieldset>
+              <legend>Cerere</legend>
+              <label for="data_finalizare">Data finalizării:</label><br>
+              <input type="date" id="data_finalizare" name="data_finalizare" min="2024-12-28" max="2025-12-31" required><br><br>
+
+              <label for="buget">Buget proiect:</label><br>
+              <input type="range" id="buget" name="buget" min="0" max="1000" step="10">
+              <span id="bugetul">50</span><br><br>
+
+              <label for="fotografie">Fotografie cu produsul:</label><br>
+              <input type="file" id="fotografie" name="fotografie" accept="image/*"><br><br>
+
+              <label for="dim">Dimensiune (1 - 300 cm):</label><br>
+              <input type="number" id="dim" name="dim" min="1" max="300" required><br><br>
+
+              <label for="culoare">Culoare:</label><br>
+              <input type="color" id="culoare" name="culoare"><br><br>
+
+              <label for="craft">Tipul lucrării*:</label><br>
+              <select id="craft" name="craft">
+                <option value="" disabled selected>Selectați o opțiune</option>
+                <option value="crochet">Croșetat</option>
+                <option value="knit">Tricotat</option>
+                <option value="weaved">Împletit</option>
+                <option value="other">Altul</option>
+              </select><br><br>
+
+              <label for="adresa">Descriere proiect (proveniența pozei inspiraționale, pentru cine este etc.):</label><br>
+              <textarea id="adresa" name="adresa" rows="4" cols="50" style="resize: none;" required></textarea><br><br>
+            </fieldset>
+   
+            <input type="submit" value="Trimite cerere">
+          </form>
+        </div>
+    </body>
+</html>
