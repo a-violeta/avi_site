@@ -5,11 +5,12 @@ window.onload = function() {
     const bugetSlider = document.getElementById('buget');
     const creditValue = document.getElementById('bugetul');
     
-    //slider ul
+    //slider ul buget
     bugetSlider.addEventListener('input', function() {
         creditValue.textContent = bugetSlider.value;
     });
 
+    //anunt trimitere formular
     const form = document.getElementById("user_form");
     const notification = document.createElement("p");
     notification.id = "notification";
@@ -25,11 +26,12 @@ window.onload = function() {
         notification.textContent = "Formularul a fost trimis. Mulțumim!";
     });
 
+    //schimba tema
     const body = document.body;
     const themeButton = document.createElement("button");
     themeButton.id = "theme_toggle";
     themeButton.textContent = "Schimba tema!";
-    const p = document.getElementsByClassName("instructiuni"); //MODIFICARE
+    const p = document.getElementsByClassName("instructiuni");
     p[0].insertAdjacentElement("beforebegin", themeButton);
 
     const savedTheme = localStorage.getItem("theme");
@@ -48,13 +50,13 @@ window.onload = function() {
             localStorage.setItem("theme", "light_mode");
         }
     });
-  
+
+    //campul judete
     const romaniaRadio = document.getElementById("romania");
     const otherRadio = document.getElementById("other");
     const countyDropdown = document.getElementById("county-dropdown");
     const countyText = document.getElementById("county-text");
 
-    //MODIFICARI
     function populateCounties() {
       countyDropdown.innerHTML = '<option value="">-- Selectează județul --</option>'; //reseteaza dropdown  
       fetch("../form/resources/json file/judete.json")
